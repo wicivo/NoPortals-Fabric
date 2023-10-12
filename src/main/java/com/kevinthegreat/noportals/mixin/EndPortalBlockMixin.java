@@ -18,7 +18,7 @@ public abstract class EndPortalBlockMixin {
     private void noportals_disableEndPortal(BlockState state, World world, BlockPos pos, Entity entity, CallbackInfo ci) {
         if (NoPortals.getOptions().isEndPortalDisabled()) {
             if (entity instanceof PlayerEntity player) {
-                NoPortals.sendPortalDisabledMessage(player, NoPortals.MOD_ID + ":disabled.end");
+                NoPortals.sendPortalDisabledMessage(player, "Энд отключен");
             }
             ci.cancel();
         }
